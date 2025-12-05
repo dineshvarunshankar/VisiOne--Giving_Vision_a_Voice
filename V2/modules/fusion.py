@@ -6,7 +6,6 @@ class FusionEngine:
         fused_detections = []
         h_img, w_img = depth.shape[:2]
         
-        # Unpack now includes 'track_age'
         for label, mask, box, conf_det, track_id, velocity, direction, track_age in detections:
             x1, y1, x2, y2 = box
             x1, y1 = max(0, x1), max(0, y1)
